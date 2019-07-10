@@ -16,4 +16,4 @@ You'll learn:
 - Using hardware resources - Taking pictures
 - Uploading data to Salesforce
 
-[get started](https://codefriar.github.io/){: .btn}
+[get started](https://codefriar.github.io/IOSAndSalesforce/docs/step1)
