@@ -38,7 +38,7 @@ array.sorted { (item1, item2) in return item1 < item2 }
 
 ## Protocols
 
-Protocols have no immediate analog to Apex, or other common OO lanaguages aside from Obj-c. They are similar in concept to Interfaces, and used to compose an object (struct or class). When an object conforms to a protocol, it implements properties and methods defined by the protocol. Generally speaking, protocols are the correct abstraction when the functionality defined by the protocol can be described as '-able'. Ie: rideable, sharable, or editable. For instance, a protocol named `ridable` may define a 'goForward' method for movement that a horse, bike and car would all be able to implemnt, even though the implementation is different.
+Protocols have no immediate analog to Apex, or other common OO lanaguages aside from Obj-c. They are most similar in concept to Interfaces, and used to compose an object (struct or class). When an object conforms to a protocol, it implements properties and methods defined by the protocol. Generally speaking, protocols are the correct abstraction when the functionality defined by the protocol can be described as '-able'. Ie: rideable, sharable, or editable. For instance, a protocol named `ridable` may define a 'goForward' method for movement that a horse, bike and car would all be able to implemnt, even though the implementation is different.
 
 Protocols are the primary method of object composition in Swift. Protocols can extend other protocols. For example, a `Ridable` protocol can implement a `Moveable` protocol. Any object conforming to `Ridable` would also have to conform to `Moveable`
 
@@ -58,7 +58,7 @@ Defining a conforming object:
 
 ```swift
 // this struct would need to conform to both protocols
-struct SomeStruct: Protocol1, Protocol2 {}`
+struct SomeStruct: Protocol1, Protocol2 {}
 ```
 
 ```swift
@@ -68,7 +68,7 @@ class awesomeClass: Ridable {}
 
 ## Playgrounds
 
-One of my favorite things about Swift is the built-in REPL (Read, Eval, Print, Loop). In Xcode these are called `playgrounds`. I encourage you to create a new playground `file > new > playground` from within Xcode.
+One of my favorite things about Swift is the built-in REPL (Read, Eval, Print, Loop). In Xcode these are called `Playgrounds`. I encourage you to create a new playground `File > New > Playground` from within Xcode.
 
 ## Helpful links.
 
