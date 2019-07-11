@@ -25,8 +25,17 @@ import SalesforceSDKCore
 
 These lines give us access to UIKit, which we'll use for data display, and the Salesforce SDK. For now, save your file.
 
-Open the Main.storyboard. By default, Xcode includes a tab-based navigation controller. You'll also notice a new 'Navigator' style pane. ![Storyboard Navigator](https://codefriar.github.io/IOSAndSalesforce/img/storyboardScenes.png "Storyboard Navigator")
+Open the Main.storyboard. By default, Xcode includes a tab-based navigation controller. You'll also notice a new 'Navigator' style pane.
+
+![Storyboard Navigator](https://codefriar.github.io/IOSAndSalesforce/img/storyboardScenes.png "Storyboard Navigator")
+
 Clicking on each of the scenes and hit your delete key to remove them. We want to start with a blank slate.
+
+Once you've got a blank slate, click the library button and search for navigation. You should see this:
+
+![Library](https://codefriar.github.io/IOSAndSalesforce/img/addNavigationController.png "add Navigation Controller")
+
+Click on, and drag the navigation controller to your storyboard.
 
 ## Closures-as-callbacks
 
