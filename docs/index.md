@@ -8,7 +8,7 @@ You'll learn:
 
 - Basics of Swift Development
 - Basics of Interface Builder, Storyboards and UIKit development
-- Enabling Biometric Authorization (TouchID / FaceID)
+- Setting up our project
 - Getting a List of Accounts - SOQL from iOS
 - Navigation between Views with Seques & passing data between view controllers
 - Using hardware resources - Taking pictures

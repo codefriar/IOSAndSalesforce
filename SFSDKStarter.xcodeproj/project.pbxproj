@@ -1,0 +1,731 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B58C4388226F61D70090B64F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58C4386226F61D70090B64F /* Main.storyboard */; };
+		B58C438A226F61D70090B64F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B58C4389226F61D70090B64F /* Assets.xcassets */; };
+		B58C438D226F61D70090B64F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58C438B226F61D70090B64F /* LaunchScreen.storyboard */; };
+		B58C4398226F61D80090B64F /* SFSDKStarterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58C4397226F61D80090B64F /* SFSDKStarterTests.swift */; };
+		B58C43F3226F650E0090B64F /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58C43EE226F650E0090B64F /* InitialViewController.swift */; };
+		B58C43F4226F650E0090B64F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58C43EF226F650E0090B64F /* AppDelegate.swift */; };
+		B58C43F5226F650E0090B64F /* bootconfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = B58C43F0226F650E0090B64F /* bootconfig.plist */; };
+		B58C43F6226F650E0090B64F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58C43F1226F650E0090B64F /* main.swift */; };
+		B58C43F7226F650E0090B64F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58C43F2226F650E0090B64F /* RootViewController.swift */; };
+		B58C441B226FA3390090B64F /* SalesforceAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58C43AC226F634B0090B64F /* SalesforceAnalytics.framework */; };
+		B58C441C226FA3390090B64F /* SalesforceSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58C43BB226F63520090B64F /* SalesforceSDKCommon.framework */; };
+		B58C441D226FA3390090B64F /* SalesforceSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58C43CD226F635B0090B64F /* SalesforceSDKCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B58C4394226F61D80090B64F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B58C4375226F61D70090B64F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B58C437C226F61D70090B64F;
+			remoteInfo = SFSDKStarter;
+		};
+		B58C43AB226F634B0090B64F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B58C43A2226F634B0090B64F /* SalesforceAnalytics.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE2B8BCF1CE900F500C6FC6A;
+			remoteInfo = SalesforceAnalytics;
+		};
+		B58C43AD226F634B0090B64F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B58C43A2226F634B0090B64F /* SalesforceAnalytics.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE2B8BD91CE900F500C6FC6A;
+			remoteInfo = SalesforceAnalyticsTests;
+		};
+		B58C43AF226F634B0090B64F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B58C43A2226F634B0090B64F /* SalesforceAnalytics.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE2B8BFF1CE91BFA00C6FC6A;
+			remoteInfo = SalesforceAnalyticsStatic;
+		};
+		B58C43B1226F634B0090B64F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B58C43A2226F634B0090B64F /* SalesforceAnalytics.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE2B8C2A1CE9218900C6FC6A;
+			remoteInfo = SalesforceAnalyticsTestApp;
+		};
+		B58C43BA226F63520090B64F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B58C43B3226F63520090B64F /* SalesforceSDKCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B7136CFE216684A700F6A221;
+			remoteInfo = SalesforceSDKCommon;
+		};
+		B58C43BC226F63520090B64F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B58C43B3226F63520090B64F /* SalesforceSDKCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B7136D07216684A700F6A221;
+			remoteInfo = SalesforceSDKCommonTests;
+		};
+		B58C43BE226F63520090B64F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B58C43B3226F63520090B64F /* SalesforceSDKCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B716A3E4218F6EEA009D407F;
+			remoteInfo = SalesforceSDKCommonTestApp;
+		};
+		B58C43C0226F63520090B64F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B58C43B3226F63520090B64F /* SalesforceSDKCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B7686AD921929D3B00D4332A;
+			remoteInfo = SalesforceSDKCommonStatic;
+		};
+		B58C43CC226F635B0090B64F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B58C43C2226F635A0090B64F /* SalesforceSDKCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE4CE26B1C0E449C009F6029;
+			remoteInfo = SalesforceSDKCore;
+		};
+		B58C43CE226F635B0090B64F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B58C43C2226F635A0090B64F /* SalesforceSDKCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 82D4642419C7C8170006BDFE;
+			remoteInfo = SalesforceSDKCoreTestApp;
+		};
+		B58C43D0226F635B0090B64F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B58C43C2226F635A0090B64F /* SalesforceSDKCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F7EB4151BFFC88200768720;
+			remoteInfo = SalesforceSDKCoreTests;
+		};
+		B58C43D2226F635B0090B64F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B58C43C2226F635A0090B64F /* SalesforceSDKCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CEA8825F1C18F722008D871B;
+			remoteInfo = SalesforceSDKCoreStatic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B58C437D226F61D70090B64F /* SFSDKStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFSDKStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B58C4387226F61D70090B64F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B58C4389226F61D70090B64F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B58C438C226F61D70090B64F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B58C438E226F61D70090B64F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B58C4393226F61D80090B64F /* SFSDKStarterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFSDKStarterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B58C4397226F61D80090B64F /* SFSDKStarterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSDKStarterTests.swift; sourceTree = "<group>"; };
+		B58C4399226F61D80090B64F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B58C43A2226F634B0090B64F /* SalesforceAnalytics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SalesforceAnalytics.xcodeproj; path = "mobile_sdk/SalesforceMobileSDK-iOS/libs/SalesforceAnalytics/SalesforceAnalytics.xcodeproj"; sourceTree = "<group>"; };
+		B58C43B3226F63520090B64F /* SalesforceSDKCommon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SalesforceSDKCommon.xcodeproj; path = "mobile_sdk/SalesforceMobileSDK-iOS/libs/SalesforceSDKCommon/SalesforceSDKCommon.xcodeproj"; sourceTree = "<group>"; };
+		B58C43C2226F635A0090B64F /* SalesforceSDKCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SalesforceSDKCore.xcodeproj; path = "mobile_sdk/SalesforceMobileSDK-iOS/libs/SalesforceSDKCore/SalesforceSDKCore.xcodeproj"; sourceTree = "<group>"; };
+		B58C43EE226F650E0090B64F /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		B58C43EF226F650E0090B64F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B58C43F0226F650E0090B64F /* bootconfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bootconfig.plist; sourceTree = "<group>"; };
+		B58C43F1226F650E0090B64F /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B58C43F2226F650E0090B64F /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		B58C440A226F83800090B64F /* SFSDKStarter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SFSDKStarter.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B58C437A226F61D70090B64F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B58C441B226FA3390090B64F /* SalesforceAnalytics.framework in Frameworks */,
+				B58C441C226FA3390090B64F /* SalesforceSDKCommon.framework in Frameworks */,
+				B58C441D226FA3390090B64F /* SalesforceSDKCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B58C4390226F61D80090B64F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B58C4374226F61D70090B64F = {
+			isa = PBXGroup;
+			children = (
+				B58C437F226F61D70090B64F /* SFSDKStarter */,
+				B58C4396226F61D80090B64F /* SFSDKStarterTests */,
+				B58C437E226F61D70090B64F /* Products */,
+				B58C43C2226F635A0090B64F /* SalesforceSDKCore.xcodeproj */,
+				B58C43B3226F63520090B64F /* SalesforceSDKCommon.xcodeproj */,
+				B58C43A2226F634B0090B64F /* SalesforceAnalytics.xcodeproj */,
+				B58C441A226FA3390090B64F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B58C437E226F61D70090B64F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B58C437D226F61D70090B64F /* SFSDKStarter.app */,
+				B58C4393226F61D80090B64F /* SFSDKStarterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B58C437F226F61D70090B64F /* SFSDKStarter */ = {
+			isa = PBXGroup;
+			children = (
+				B58C440A226F83800090B64F /* SFSDKStarter.entitlements */,
+				B58C43EF226F650E0090B64F /* AppDelegate.swift */,
+				B58C43F0226F650E0090B64F /* bootconfig.plist */,
+				B58C43EE226F650E0090B64F /* InitialViewController.swift */,
+				B58C43F1226F650E0090B64F /* main.swift */,
+				B58C43F2226F650E0090B64F /* RootViewController.swift */,
+				B58C4386226F61D70090B64F /* Main.storyboard */,
+				B58C4389226F61D70090B64F /* Assets.xcassets */,
+				B58C438B226F61D70090B64F /* LaunchScreen.storyboard */,
+				B58C438E226F61D70090B64F /* Info.plist */,
+			);
+			path = SFSDKStarter;
+			sourceTree = "<group>";
+		};
+		B58C4396226F61D80090B64F /* SFSDKStarterTests */ = {
+			isa = PBXGroup;
+			children = (
+				B58C4397226F61D80090B64F /* SFSDKStarterTests.swift */,
+				B58C4399226F61D80090B64F /* Info.plist */,
+			);
+			path = SFSDKStarterTests;
+			sourceTree = "<group>";
+		};
+		B58C43A3226F634B0090B64F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B58C43AC226F634B0090B64F /* SalesforceAnalytics.framework */,
+				B58C43AE226F634B0090B64F /* SalesforceAnalyticsTests.xctest */,
+				B58C43B0226F634B0090B64F /* libSalesforceAnalytics.a */,
+				B58C43B2226F634B0090B64F /* SalesforceAnalyticsTestApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B58C43B4226F63520090B64F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B58C43BB226F63520090B64F /* SalesforceSDKCommon.framework */,
+				B58C43BD226F63520090B64F /* SalesforceSDKCommonTests.xctest */,
+				B58C43BF226F63520090B64F /* SalesforceSDKCommonTestApp.app */,
+				B58C43C1226F63520090B64F /* libSalesforceSDKCommon.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B58C43C3226F635A0090B64F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B58C43CD226F635B0090B64F /* SalesforceSDKCore.framework */,
+				B58C43CF226F635B0090B64F /* SalesforceSDKCoreTestApp.app */,
+				B58C43D1226F635B0090B64F /* SalesforceSDKCoreTests.xctest */,
+				B58C43D3226F635B0090B64F /* libSalesforceSDKCore.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B58C441A226FA3390090B64F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B58C437C226F61D70090B64F /* SFSDKStarter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B58C439C226F61D80090B64F /* Build configuration list for PBXNativeTarget "SFSDKStarter" */;
+			buildPhases = (
+				B58C4379226F61D70090B64F /* Sources */,
+				B58C437A226F61D70090B64F /* Frameworks */,
+				B58C437B226F61D70090B64F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SFSDKStarter;
+			productName = SFSDKStarter;
+			productReference = B58C437D226F61D70090B64F /* SFSDKStarter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B58C4392226F61D80090B64F /* SFSDKStarterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B58C439F226F61D80090B64F /* Build configuration list for PBXNativeTarget "SFSDKStarterTests" */;
+			buildPhases = (
+				B58C438F226F61D80090B64F /* Sources */,
+				B58C4390226F61D80090B64F /* Frameworks */,
+				B58C4391226F61D80090B64F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B58C4395226F61D80090B64F /* PBXTargetDependency */,
+			);
+			name = SFSDKStarterTests;
+			productName = SFSDKStarterTests;
+			productReference = B58C4393226F61D80090B64F /* SFSDKStarterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B58C4375226F61D70090B64F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Salesforce;
+				TargetAttributes = {
+					B58C437C226F61D70090B64F = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+					B58C4392226F61D80090B64F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = B58C437C226F61D70090B64F;
+					};
+				};
+			};
+			buildConfigurationList = B58C4378226F61D70090B64F /* Build configuration list for PBXProject "SFSDKStarter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B58C4374226F61D70090B64F;
+			productRefGroup = B58C437E226F61D70090B64F /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B58C43A3226F634B0090B64F /* Products */;
+					ProjectRef = B58C43A2226F634B0090B64F /* SalesforceAnalytics.xcodeproj */;
+				},
+				{
+					ProductGroup = B58C43B4226F63520090B64F /* Products */;
+					ProjectRef = B58C43B3226F63520090B64F /* SalesforceSDKCommon.xcodeproj */;
+				},
+				{
+					ProductGroup = B58C43C3226F635A0090B64F /* Products */;
+					ProjectRef = B58C43C2226F635A0090B64F /* SalesforceSDKCore.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				B58C437C226F61D70090B64F /* SFSDKStarter */,
+				B58C4392226F61D80090B64F /* SFSDKStarterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B58C43AC226F634B0090B64F /* SalesforceAnalytics.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SalesforceAnalytics.framework;
+			remoteRef = B58C43AB226F634B0090B64F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B58C43AE226F634B0090B64F /* SalesforceAnalyticsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SalesforceAnalyticsTests.xctest;
+			remoteRef = B58C43AD226F634B0090B64F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B58C43B0226F634B0090B64F /* libSalesforceAnalytics.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSalesforceAnalytics.a;
+			remoteRef = B58C43AF226F634B0090B64F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B58C43B2226F634B0090B64F /* SalesforceAnalyticsTestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SalesforceAnalyticsTestApp.app;
+			remoteRef = B58C43B1226F634B0090B64F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B58C43BB226F63520090B64F /* SalesforceSDKCommon.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SalesforceSDKCommon.framework;
+			remoteRef = B58C43BA226F63520090B64F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B58C43BD226F63520090B64F /* SalesforceSDKCommonTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SalesforceSDKCommonTests.xctest;
+			remoteRef = B58C43BC226F63520090B64F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B58C43BF226F63520090B64F /* SalesforceSDKCommonTestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SalesforceSDKCommonTestApp.app;
+			remoteRef = B58C43BE226F63520090B64F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B58C43C1226F63520090B64F /* libSalesforceSDKCommon.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSalesforceSDKCommon.a;
+			remoteRef = B58C43C0226F63520090B64F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B58C43CD226F635B0090B64F /* SalesforceSDKCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SalesforceSDKCore.framework;
+			remoteRef = B58C43CC226F635B0090B64F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B58C43CF226F635B0090B64F /* SalesforceSDKCoreTestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SalesforceSDKCoreTestApp.app;
+			remoteRef = B58C43CE226F635B0090B64F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B58C43D1226F635B0090B64F /* SalesforceSDKCoreTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SalesforceSDKCoreTests.xctest;
+			remoteRef = B58C43D0226F635B0090B64F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B58C43D3226F635B0090B64F /* libSalesforceSDKCore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSalesforceSDKCore.a;
+			remoteRef = B58C43D2226F635B0090B64F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B58C437B226F61D70090B64F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B58C43F5226F650E0090B64F /* bootconfig.plist in Resources */,
+				B58C438D226F61D70090B64F /* LaunchScreen.storyboard in Resources */,
+				B58C438A226F61D70090B64F /* Assets.xcassets in Resources */,
+				B58C4388226F61D70090B64F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B58C4391226F61D80090B64F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B58C4379226F61D70090B64F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B58C43F4226F650E0090B64F /* AppDelegate.swift in Sources */,
+				B58C43F3226F650E0090B64F /* InitialViewController.swift in Sources */,
+				B58C43F7226F650E0090B64F /* RootViewController.swift in Sources */,
+				B58C43F6226F650E0090B64F /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B58C438F226F61D80090B64F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B58C4398226F61D80090B64F /* SFSDKStarterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B58C4395226F61D80090B64F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B58C437C226F61D70090B64F /* SFSDKStarter */;
+			targetProxy = B58C4394226F61D80090B64F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B58C4386226F61D70090B64F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B58C4387226F61D70090B64F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B58C438B226F61D70090B64F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B58C438C226F61D70090B64F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B58C439A226F61D80090B64F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B58C439B226F61D80090B64F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B58C439D226F61D80090B64F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SFSDKStarter/SFSDKStarter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 745ST2PM9F;
+				INFOPLIST_FILE = SFSDKStarter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.SFSDKStarter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B58C439E226F61D80090B64F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SFSDKStarter/SFSDKStarter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 745ST2PM9F;
+				INFOPLIST_FILE = SFSDKStarter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.SFSDKStarter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B58C43A0226F61D80090B64F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SFSDKStarterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.SFSDKStarterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SFSDKStarter.app/SFSDKStarter";
+			};
+			name = Debug;
+		};
+		B58C43A1226F61D80090B64F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SFSDKStarterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.SFSDKStarterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SFSDKStarter.app/SFSDKStarter";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B58C4378226F61D70090B64F /* Build configuration list for PBXProject "SFSDKStarter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B58C439A226F61D80090B64F /* Debug */,
+				B58C439B226F61D80090B64F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B58C439C226F61D80090B64F /* Build configuration list for PBXNativeTarget "SFSDKStarter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B58C439D226F61D80090B64F /* Debug */,
+				B58C439E226F61D80090B64F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B58C439F226F61D80090B64F /* Build configuration list for PBXNativeTarget "SFSDKStarterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B58C43A0226F61D80090B64F /* Debug */,
+				B58C43A1226F61D80090B64F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B58C4375226F61D70090B64F /* Project object */;
+}
