@@ -34,3 +34,27 @@ Ok, we've got our delegate methods setup, but how do we actually launch the imag
 3. Using the Library, drag a Button to the right of the navigation item.
 4. Useing the right side navigator's attributes pane, use the drop-down for "System Item" to select "Camera". Afterwards, it should look like this:
    ![With A Camera Button](https://codefriar.github.io/IOSAndSalesforce/img/cameraButton.png "Added a Camera Button")
+5. Open your Swift class file and add this new function to the class:
+
+   ```swift
+   @IBAction func didTapPhotoButton(_ sender: Any){
+       imagePickerCtrl = UIImagePickerController()
+       imagePickerCtrl.delegate = self
+
+       if UIImagePickerController.isSourceTypeAvailable(.camera) {
+           imagePickerCtrl.sourceType = .camera
+       } else {
+           // Device camera is not available. Use photo album instead.
+           imagePickerCtrl.sourceType = .savedPhotosAlbum
+       }
+
+       present(imagePickerCtrl, animated: true, completion: nil)
+   }
+   ```
+
+   This function is annotated with @IBAction or Interface Builder Action. This means we can tie a button tap to invoking this function. Lets do that now. In the Main storyboard, use the storyboard navigator to select the top-level ContactDetailScene, and then view the right-side Navigator's Connections Inspector.
+   Find the received actions section, and Click-and-drag from the circle next to didTapPhotoButton to the camera button you just added.
+
+With this done, save and run your app. You should be able to click the camera button and launch the UIImagePickerController to take or select a photo.
+
+<a href="step6.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
