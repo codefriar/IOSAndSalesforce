@@ -50,7 +50,7 @@ This is pretty easy to do in Xcode, but it can be a bit confusing for new Xcode 
 
 1. While you have the Main storyboard open, use the scene navigator, and select `Root View Controller`.
 2. Using the right hand navigator, select the `Identity Inspector` - the icon looks like a little drivers license.
-3. The top section is titled 'Custom Class' and has a 'class' drop down. Using that drop down, select AccountSceneController. Note, if you don't see your AccountSceneController listed, make sure you've saved your file and that you've coded your class to conform to the `UITableViewController` protocol.
+3. The top section is titled 'Custom Class' and has a 'class' drop down. Using that drop down, select AccountSceneController. Note, if you don't see your AccountSceneController listed, make sure you've saved your file and that you've coded your class to inherit from the `UITableViewController` class.
 
 ![Identity Inspector](https://codefriar.github.io/IOSAndSalesforce/img/changeAssociatedController.png "Change the assocaited controller class")
 
@@ -58,7 +58,7 @@ That'ts it. You just used Interface Builder to drag and drop a Navigation Contro
 
 ## Walking through the class logic
 
-For this step, we're providing you the class logic, but we're going to do it one function at a time so we can walk through it.
+For this step, we're providing you the class logic, but we're going to do it one block at a time so we can walk through it.
 
 ### LoadView()
 
@@ -93,14 +93,19 @@ override func loadView() {
 
 It's in this `loadView()` method that the app will reach out to Salesforce for data. Specifically, it's going to query for 10 Accounts. In this case, it's accomplished in three distinct steps.
 
-1. Creating a request. `let request = RestClient.shared.request(forQuery: "SELECT Id, Name FROM Account LIMIT 10")`. The SDK has a number of helper methods for generating requests. Discovering what helpers are avaialble is as simple as letting Xcode autocomplete for you.
+- Creating a request. `let request = RestClient.shared.request(forQuery: "SELECT Id, Name FROM Account LIMIT 10")`. The SDK has a number of helper methods for generating requests. Discovering what helpers are avaialble is as simple as letting Xcode autocomplete for you.
 
 ![XCode Autocomplete](https://codefriar.github.io/IOSAndSalesforce/img/requestAutocomplete.png "Shows Xcode autocomplete for request methods")
 
-2. Execute the request. Because we have no idea how strong the network signal is, we can never assume how quickly -- or if -- an API request will complete. To prevent API requests from locking up the app, all API requests are asynchronous. In Swift, that means using completion callbacks. In most cases these are closures, and with regards to the SDK, there's usually two: an error closure and a success or completion closure.
+- Execute the request. Because we have no idea how strong the network signal is, we can never assume how quickly -- or if -- an API request will complete. To prevent API requests from locking up the app, all API requests are asynchronous. In Swift, that means using completion callbacks. In most cases these are closures, and with regards to the SDK, there's usually two: an error closure and a success or completion closure. Executing the request happens when you call `RestClient.shared.send(...` method.
+
+- Finally, in our completion closure, we need to parse the data Salesforce returns and assign it to our dataRows variable. This block contains a `guard let` clause. This is a Swift specific language feature that helps developers write defensive code. When a guard statement is encounterd the let assignments are evaluated. If they're not valid, the else clause is executed. If they're valid, those let assignments are avaiable through the rest of the method. In this case, the code is cascading the let assignments. This is how we step-by-step unpack the returned data from Salesforce. At the very end, the code assigns the result to the dataRows variable.
+
+Whew. That was dense. The rest is easier, I promise.
+
+### UITableViewController methods
 
 ```swift
-
     // MARK: - Table view data source
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -128,7 +133,22 @@ It's in this `loadView()` method that the app will reach out to Salesforce for d
         cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         return cell
     }
+```
 
+Because we specified that our AccountSceneController inherits from UITableViewController there are a number of methods we must implement. Two of them are pretty easy, and serve as a great example of how to read and write iOS method names. Lets take a look at the first one, `numberOfSectionsInTableView(tableView: UITableView) -> Int`. iOS methods may seem verbose, bu they're very descriptive. In this case, the method name is self-descriptive. It should return an Int, representing the number of sections in the table view. What's a section? Think of your iOS contacts view. As you scroll through, you'll see a section for each letter of the alphabet. For this app, none of our table views will have more than one section; which makes implementing it pretty simple.
+
+Likewise, the `tableView(_ tableView: UITableView?, numberOfRowsInSection section: Int) -> Int` method's name tells us exactly what it's supposed to do. For a given table view, how many rows are in this section? Because we only have one section, we can shortcut our implmentation and always respond with the length of our dataRows array.
+
+Finally, we come the core method: `override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {...}`. This method is responsible for drawing each individual cell in the table. There are a number of options here, but the two key bits are:
+
+1. ```swift
+   let obj = dataRows[indexPath.row]
+   cell.textLabel?.text = obj["Name"] as? String
+   ```
+   That indexPath.row thats passed in by iOS tells us what row in the table iOS is working on at the moment. Using that, coupled with our dataRows array, we can set the cell's text label to the Name of our account.
+2.
+
+```swift
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ViewContacts" {
             let destination = segue.destination as! ContactListController
