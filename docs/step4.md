@@ -146,12 +146,22 @@ Finally, we come the core method: `override func tableView(_ tableView: UITableV
    cell.textLabel?.text = obj["Name"] as? String
    ```
    That indexPath.row thats passed in by iOS tells us what row in the table iOS is working on at the moment. Using that, coupled with our dataRows array, we can set the cell's text label to the Name of our account.
-2.
+2. Since we know that we want the user to be able to tap on an account to navigate to a table of it's contacts, let's add the conventional > disclosure triangle with this:
+   ```swift
+   cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+   ```
+
+Ok, home stretch. only one method left. This is one we've mentioned before and it's used to pass data between veiw controllers as users trigger a segue. There are two key features of this method I want to draw your attention too.
+
+1. Right at the beginning the code checks to see if the segue we're triggering has an identifier of "ViewContacts". This string of "ViewContacts" has to match the segue in Interface builder. To create a new segue between two ViewControllers Control-click on the Scene handle, and drag to the destination ViewController. You'll see a pop up to select the type of segue. For this app, always choose 'Show'
+   ![Creating a new Segue](https://codefriar.github.io/IOSAndSalesforce/img/newSegue.png "Shows how to create a new segue")
+2. Once you'ce created the segue between view controllers, you'll need to give it a viewIdentifier. To do so, click on the segue itself, and use the right-hand navigator to show the Attributes inspector. Make sure the segue identifier is unique!
+   ![Giving the Segue an Identifier](https://codefriar.github.io/IOSAndSalesforce/img/nameSegueIdentifier.png "Shows how to give a segue a unique identifier")
 
 ```swift
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ViewContacts" {
-            let destination = segue.destination as! ContactListController
+        if segue.identifier == "toContactsSceneController" {
+            let destination = segue.destination as! ContactSceneController
             let cell = sender as! UITableViewCell
             let indexPath = self.tableView.indexPath(for: cell)!
             if let accountName = self.dataRows[indexPath.row]["Name"] as? String {
@@ -164,6 +174,22 @@ Finally, we come the core method: `override func tableView(_ tableView: UITableV
     }
 ```
 
-## Closures-as-callbacks
+Notice how it creates an instance of the destination object named destination? At the end of the method it assigns data to the instances' properties. This is how you pass data from one viewController to the next.
 
-## Your first protocol
+## Run it!
+
+Ok, it's time to compile and run our app on the simulator. Either click the play button in upper left, or hit `cmd-r` to build and run your app!
+
+## Next Steps
+
+Our app is designed to first show a list of accounts. Which we've done. Now it's up to you to handle the other two steps - showing a list of contacts associated with this account, and when a contact is tapped, showing their contact information. Here's a blueprint for the tasks in this step:
+
+1. Create two new Swift files named 'ContactsSceneController' and 'ContactDetailSceneController'
+2. Add two new TableViewControllers to your Storyboard Canvas.
+3. Give one the identifier 'toContactsSceneController' and other the identifier 'toContactDetailController'
+4. Code your Controllers to:
+   - query for the appropriate data. Remember you'll be passing id's from one viewController to another as the user taps a particluar row.
+   - create the cells as needed
+   - set up data passing from one view controller to the next
+
+<a href="step5.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
