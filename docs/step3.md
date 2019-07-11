@@ -78,4 +78,6 @@ These two lines are responsible for loading a storyboard and making the initial 
 You've done a lot of work in this step. That said, there are some things that we bootstrapped for you. Some things because they're outside the scope of what this project is about, and some because, well, the Salesforce Platform takes care of them for you. Specifically, I want to draw your attention to two specific things:
 
 1. You didn't have to do any of the Xcode configuration for incorporating the Mobile SDK. The starter project in this repo bootstraps that for you, so long as you cloned the submodules. Why? Because the vagarities of Xcode configuration and external libraries are out of scope for this lab. Want to learn more? Check out [Creating an iOS Swift Project Manually](https://developer.salesforce.com/docs/atlas.en-us.mobile_sdk.meta/mobile_sdk/ios_new_native_project_manual.htm)
-2. One of the key features of the app you're building is biometric authentication. TouchID or FaceId.
+2. One of the key features of the app you're building is biometric authentication. Due to the way the SDK works, you did everything needed to implement Biometric authentication when you checked the 'PIN Protect' checkbox. Now, when your app launches, you'll be asked to provide a PIN as an additional layer of security. If you run your app on a device with TouchID or FaceID, you'll automatically be prompted to use them. Sometimes it's nice to have things just work.
+
+<a href="step4.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
