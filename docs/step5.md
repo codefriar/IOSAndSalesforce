@@ -18,32 +18,19 @@ Xcode is likely to start showing error icons at this point because we're missing
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         imagePickerCtrl.dismiss(animated: true, completion: nil)
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
-            upload(image: image)
+            SalesforceLogger.e(type(of: self), message: "Got a Photo. \(errorDescription)")
         }
     }
 
-    func upload(image: UIImage){
-        guard let contactId = self.contactId else {return}
-        let attachmentRequest = RestClient.shared.requestForCreatingImageAttachment(from: image, relatingTo: contactId)
-        RestClient.shared.send(request: attachmentRequest, onFailure: self.handleError){ result, _ in
-            SalesforceLogger.d(type(of: self), message: "Completed upload of photo")
-        }
-    }
 ```
 
-Additionally, to make it easier to reason about what's happening, let's create an _extension_. In your ContactDetailSceneController file, but _after_ the definition of your class, add the following code:
+Functionally, the first method specifies what happens once the user has said "Ok, I'm done taking photos." and in our case we want to upload the file. We'll get to uploading the photos in our next step, but for now, lets just log that we got a picture.
 
-```swift
-extension RestClient {
-    func requestForCreatingImageAttachment(from image: UIImage, relatingTo: String, fileName: String? = nil) -> RestRequest {
-        let imageData = UIImagePNGRepresentation(image.resizedByHalf())!
-        let uploadFileName = fileName ?? UUID().uuidString + ".png"
-        return self.requestForCreatingAttachment(from: imageData, withFileName: uploadFileName, relatingTo: relatingTo)
-    }
+Ok, we've got our delegate methods setup, but how do we actually launch the image picker? First, we'll need to add a Navigation Item, and a Button to our interface.
 
-    private func requestForCreatingAttachment(from data: Data, withFileName fileName: String, relatingTo: String) -> RestRequest {
-        let record = ["VersionData": data.base64EncodedString(options: .lineLength64Characters), "Title": fileName, "PathOnClient": fileName, "FirstPublishLocationId": relatingTo]
-        return self.requestForCreate(withObjectType: "ContentVersion", fields: record)
-    }
-}
-```
+1. Open the main storyboard, and navigate to your ContactDetailScene.
+2. Using the Library drag a Navigation Item to the top of your scene. It will default to "Title" and should look like this, once added.
+   ![Added a Navigation Item](https://codefriar.github.io/IOSAndSalesforce/img/addedNavigationItem.png "Added Navigation Item")
+3. Using the Library, drag a Button to the right of the navigation item.
+4. Useing the right side navigator's attributes pane, use the drop-down for "System Item" to select "Camera". Afterwards, it should look like this:
+   ![With A Camera Button](https://codefriar.github.io/IOSAndSalesforce/img/cameraButton.png "Added a Camera Button")
