@@ -24,3 +24,5 @@ A Storyboard is a collection of scenes and segues. Scenes represent a completed 
 
 - [Trailhead Xcode Essentials](https://trailhead.salesforce.com/content/learn/modules/xcode-essentials)
 - [Storyboards Tutorial by Ray Wenderlich](https://www.raywenderlich.com/464-storyboards-tutorial-for-ios-part-1)
+
+<a href="step3.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
