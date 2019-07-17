@@ -13,3 +13,16 @@ You'll learn:
 * Navigation between Views with Seques & passing data between view controllers
 * Using hardware resources - Taking pictures
 * Uploading data to Salesforce
+
+### How do I start?
+You'll need to clone this repo, but in a slightly different way than normal. Specifically, you'll need to clone this repo and it's submodules. Without the submodules, you won't have the mobile sdk available. Here's how to clone with submodules:
+
+```console
+git clone --recurse-submodules https://github.com/codefriar/IOSAndSalesforce.git
+```
+
+If you've already cloned this repositiory, without submodules, please use this command to pull them:
+
+```console
+git submodule update --init --recursive
+```
