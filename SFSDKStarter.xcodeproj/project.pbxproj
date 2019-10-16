@@ -19,6 +19,9 @@
 		B58C441B226FA3390090B64F /* SalesforceAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58C43AC226F634B0090B64F /* SalesforceAnalytics.framework */; };
 		B58C441C226FA3390090B64F /* SalesforceSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58C43BB226F63520090B64F /* SalesforceSDKCommon.framework */; };
 		B58C441D226FA3390090B64F /* SalesforceSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58C43CD226F635B0090B64F /* SalesforceSDKCore.framework */; };
+		B59C3F1023579F450060CE1A /* AccountSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C3F0F23579F450060CE1A /* AccountSceneController.swift */; };
+		B59C3F2023579F9D0060CE1A /* ContactsSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C3F1F23579F9D0060CE1A /* ContactsSceneController.swift */; };
+		B59C3F282357A02D0060CE1A /* ContactDetailsSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C3F272357A02D0060CE1A /* ContactDetailsSceneController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +136,9 @@
 		B58C43F1226F650E0090B64F /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B58C43F2226F650E0090B64F /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B58C440A226F83800090B64F /* SFSDKStarter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SFSDKStarter.entitlements; sourceTree = "<group>"; };
+		B59C3F0F23579F450060CE1A /* AccountSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSceneController.swift; sourceTree = "<group>"; };
+		B59C3F1F23579F9D0060CE1A /* ContactsSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsSceneController.swift; sourceTree = "<group>"; };
+		B59C3F272357A02D0060CE1A /* ContactDetailsSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsSceneController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +189,9 @@
 			children = (
 				B58C440A226F83800090B64F /* SFSDKStarter.entitlements */,
 				B58C43EF226F650E0090B64F /* AppDelegate.swift */,
+				B59C3F0F23579F450060CE1A /* AccountSceneController.swift */,
+				B59C3F1F23579F9D0060CE1A /* ContactsSceneController.swift */,
+				B59C3F272357A02D0060CE1A /* ContactDetailsSceneController.swift */,
 				B58C43F0226F650E0090B64F /* bootconfig.plist */,
 				B58C43EE226F650E0090B64F /* InitialViewController.swift */,
 				B58C43F1226F650E0090B64F /* main.swift */,
@@ -453,10 +462,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B59C3F1023579F450060CE1A /* AccountSceneController.swift in Sources */,
 				B58C43F4226F650E0090B64F /* AppDelegate.swift in Sources */,
 				B58C43F3226F650E0090B64F /* InitialViewController.swift in Sources */,
 				B58C43F7226F650E0090B64F /* RootViewController.swift in Sources */,
 				B58C43F6226F650E0090B64F /* main.swift in Sources */,
+				B59C3F282357A02D0060CE1A /* ContactDetailsSceneController.swift in Sources */,
+				B59C3F2023579F9D0060CE1A /* ContactsSceneController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
