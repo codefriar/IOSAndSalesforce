@@ -12,18 +12,6 @@ import UIKit
 
 extension RestClient {
     
-    func requestForCreatingImageAttachment(from image: UIImage, relatingTo: String, fileName: String? = nil) -> RestRequest {
-        let resized = image.resized(toPercentage: 0.25)
-        let imageData = UIImagePNGRepresentation(resized)!
-        let uploadFileName = fileName ?? UUID().uuidString + ".png"
-        return self.requestForCreatingAttachment(from: imageData, withFileName: uploadFileName, relatingTo: relatingTo)
-    }
-    
-    private func requestForCreatingAttachment(from data: Data, withFileName fileName: String, relatingTo: String) -> RestRequest {
-        let record = ["VersionData": data.base64EncodedString(options: .lineLength64Characters), "Title": fileName, "PathOnClient": fileName, "FirstPublishLocationId": relatingTo]
-        return self.requestForCreate(withObjectType: "ContentVersion", fields: record)
-    }
-    
     func createInstrumentationRecord(_ params: [String:String]){
         let instrumentationRequest = RestClient.shared.requestForCreate(withObjectType: "iosMiniHack1__instrumentation__c", fields: params)
         
