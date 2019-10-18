@@ -12,26 +12,30 @@ import SalesforceSDKCore
 
 extension UITableView {
     
-    @objc func dequeueReusuableCellWithInstrumentation(withIdentifier: String) -> UITableViewCell {
-        let params = [
-            "iosMiniHack1__type__c": "Cell Drawn"
-        ]
-        RestClient.shared.createInstrumentationRecord(params)
-        return dequeueReusuableCellWithInstrumentation(withIdentifier: withIdentifier)
-    }
+  @objc func dequeueReusuableCellWithInstrumentation(withIdentifier: String) -> UITableViewCell {
+    guard let dataSource = self.dataSource
+      else { return self.dequeueReusuableCellWithInstrumentation(withIdentifier: withIdentifier)}
     
-    private static let swizzleDequeuedImplementation: Void = {
-        let instance: UITableView = UITableView()
-        let klass: AnyClass! = object_getClass(instance)
-        let originalMethod = class_getInstanceMethod(klass, #selector(dequeueReusableCell(withIdentifier:)))
-        let swizzledMethod = class_getInstanceMethod(klass, #selector(dequeueReusuableCellWithInstrumentation(withIdentifier:)))
-        if let originalMethod = originalMethod, let swizzledMethod = swizzledMethod {
-            method_exchangeImplementations(originalMethod, swizzledMethod)
-        }
-    }()
+    let params = [
+      "iosMiniHack1__type__c": "Cell Drawn",
+      "iosMiniHack1__Extra_Data__c": String(describing: type(of: dataSource))
+    ]
+    RestClient.shared.createInstrumentationRecord(params)
+    return dequeueReusuableCellWithInstrumentation(withIdentifier: withIdentifier)
+  }
     
-    public static func swizzleDequeue() {
-        _ = self.swizzleDequeuedImplementation
+  private static let swizzleDequeuedImplementation: Void = {
+    let instance: UITableView = UITableView()
+    let klass: AnyClass! = object_getClass(instance)
+    let originalMethod = class_getInstanceMethod(klass, #selector(dequeueReusableCell(withIdentifier:)))
+    let swizzledMethod = class_getInstanceMethod(klass, #selector(dequeueReusuableCellWithInstrumentation(withIdentifier:)))
+    if let originalMethod = originalMethod, let swizzledMethod = swizzledMethod {
+      method_exchangeImplementations(originalMethod, swizzledMethod)
     }
+  }()
+  
+  public static func swizzleDequeue() {
+    _ = self.swizzleDequeuedImplementation
+  }
     
 }
