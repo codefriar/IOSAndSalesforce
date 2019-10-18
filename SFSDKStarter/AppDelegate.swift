@@ -38,7 +38,7 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
                 self.setupRootViewController()
             }
         })
-        
+        initInstrumentation()
     }
     
     // MARK: - App delegate lifecycle

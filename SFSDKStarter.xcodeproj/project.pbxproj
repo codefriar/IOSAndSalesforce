@@ -22,6 +22,10 @@
 		B59C3F1023579F450060CE1A /* AccountSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C3F0F23579F450060CE1A /* AccountSceneController.swift */; };
 		B59C3F2023579F9D0060CE1A /* ContactsSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C3F1F23579F9D0060CE1A /* ContactsSceneController.swift */; };
 		B59C3F282357A02D0060CE1A /* ContactDetailsSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C3F272357A02D0060CE1A /* ContactDetailsSceneController.swift */; };
+		B59C3F41235945F90060CE1A /* RestClient+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C3F2F235945F90060CE1A /* RestClient+extensions.swift */; };
+		B59C3F42235945F90060CE1A /* AppDelegate+Trailhead.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C3F3E235945F90060CE1A /* AppDelegate+Trailhead.swift */; };
+		B59C3F43235945F90060CE1A /* TableView+Instrumentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C3F3F235945F90060CE1A /* TableView+Instrumentation.swift */; };
+		B59C3F44235945F90060CE1A /* UIImage+resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C3F40235945F90060CE1A /* UIImage+resize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +143,10 @@
 		B59C3F0F23579F450060CE1A /* AccountSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSceneController.swift; sourceTree = "<group>"; };
 		B59C3F1F23579F9D0060CE1A /* ContactsSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsSceneController.swift; sourceTree = "<group>"; };
 		B59C3F272357A02D0060CE1A /* ContactDetailsSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsSceneController.swift; sourceTree = "<group>"; };
+		B59C3F2F235945F90060CE1A /* RestClient+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RestClient+extensions.swift"; sourceTree = "<group>"; };
+		B59C3F3E235945F90060CE1A /* AppDelegate+Trailhead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Trailhead.swift"; sourceTree = "<group>"; };
+		B59C3F3F235945F90060CE1A /* TableView+Instrumentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+Instrumentation.swift"; sourceTree = "<group>"; };
+		B59C3F40235945F90060CE1A /* UIImage+resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+resize.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +199,10 @@
 				B58C43EF226F650E0090B64F /* AppDelegate.swift */,
 				B59C3F0F23579F450060CE1A /* AccountSceneController.swift */,
 				B59C3F1F23579F9D0060CE1A /* ContactsSceneController.swift */,
+				B59C3F3E235945F90060CE1A /* AppDelegate+Trailhead.swift */,
+				B59C3F2F235945F90060CE1A /* RestClient+extensions.swift */,
+				B59C3F3F235945F90060CE1A /* TableView+Instrumentation.swift */,
+				B59C3F40235945F90060CE1A /* UIImage+resize.swift */,
 				B59C3F272357A02D0060CE1A /* ContactDetailsSceneController.swift */,
 				B58C43F0226F650E0090B64F /* bootconfig.plist */,
 				B58C43EE226F650E0090B64F /* InitialViewController.swift */,
@@ -464,10 +476,14 @@
 			files = (
 				B59C3F1023579F450060CE1A /* AccountSceneController.swift in Sources */,
 				B58C43F4226F650E0090B64F /* AppDelegate.swift in Sources */,
+				B59C3F43235945F90060CE1A /* TableView+Instrumentation.swift in Sources */,
 				B58C43F3226F650E0090B64F /* InitialViewController.swift in Sources */,
 				B58C43F7226F650E0090B64F /* RootViewController.swift in Sources */,
 				B58C43F6226F650E0090B64F /* main.swift in Sources */,
 				B59C3F282357A02D0060CE1A /* ContactDetailsSceneController.swift in Sources */,
+				B59C3F42235945F90060CE1A /* AppDelegate+Trailhead.swift in Sources */,
+				B59C3F44235945F90060CE1A /* UIImage+resize.swift in Sources */,
+				B59C3F41235945F90060CE1A /* RestClient+extensions.swift in Sources */,
 				B59C3F2023579F9D0060CE1A /* ContactsSceneController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
